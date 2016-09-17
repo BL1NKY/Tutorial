@@ -12,11 +12,11 @@
     <div class="container">
       <div class="jumbotron">
         <h1>JQuery!</h1>
-        <button type="button" class="btn btn-default" id="btn1">#btn1</button>
-        <button type="button" class="btn btn-default" id="btn2">#btn2</button>
-        <button type="button" class="btn btn-default" id="btn3">#btn3</button>
-        <button type="button" class="btn btn-default" id="btn4">#btn4</button>
-        <button type="button" class="btn btn-default" id="btn5">#btn5</button>
+        <button type="button" class="btn btn-default panelbutton" data-panelid="panel1" id="btn1">#btn1</button>
+        <button type="button" class="btn btn-default panelbutton" data-panelid="panel2" id="btn2">#btn2</button>
+        <button type="button" class="btn btn-default panelbutton" data-panelid="panel3" id="btn3">#btn3</button>
+        <button type="button" class="btn btn-default panelbutton" data-panelid="panel4" id="btn4">#btn4</button>
+        <button type="button" class="btn btn-default panelbutton" data-panelid="panelAll" id="btn5">#btn5</button>
       </div>
     </div>
 
@@ -54,21 +54,11 @@
     <script>
 
       $(document).ready(function(){
-
-        $("#btn1").html("Panel 1").on("click", function () {
-          $("#panel1").fadeToggle(300);
-        });
-
-        $("#btn2").html("Panel 2").on("click", function () {
-          $("#panel2").fadeToggle(300);
-        });
-
-        $("#btn3").html("Panel 3").on("click", function () {
-          $("#panel3").fadeToggle(300);
-        });
-
-        $("#btn4").html("Panel 4").on("click", function () {
-          $("#panel4").fadeToggle(300);
+        var inhalt = "Neuer Inhalt";
+        $(".panelbutton").on("click", function () {
+          var panelId = $(this).attr("id");
+          $("#" + panelId).toggle();
+          $("#" + panelId + ".panel-body").html(inhalt);
         });
 
       });
