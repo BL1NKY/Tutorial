@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <style media="screen">
+    img {
+      width: 90%;
+    }
+
+    .hide {
+      display: none;
+    }
+    </style>
+  </head>
+
+
+  <body>
+
+    <header class="header">
+      <div class="container">
+        <div class="jumbotron">
+          <h1>Javascript Events</h1>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <h3>Zahlen addieren:</h3>
+        <p>
+          <input id="num-one"> + <input id="num-two">
+        </p>
+        <p id="add-sum">Ergebnis: </p>
+      </div>
+
+      <div class="container">
+        <h4>Bilder</h4>
+        <ul class="Tabelle">
+          <li><a data-img ="katze-bild" id ="katze" href ="#">Katze</a></li>
+          <li><a data-img ="hund-bild" id  ="hund" href  ="#">Hund</a></li>
+          <li><a data-img ="vogel-bild" id ="vogel" href ="#">Vogel</a></li>
+        </ul>
+
+        <img class ="hide" id ="katze-bild" src ="https://upload.wikimedia.org/wikipedia/commons/0/09/Hauskatze_in_Abendsonne.jpg"/>
+        <img class ="hide" id ="hund-bild" src  ="https://upload.wikimedia.org/wikipedia/commons/e/e0/Shiba-Yuki.jpg"/>
+        <img class ="hide" id ="vogel-bild" src ="https://upload.wikimedia.org/wikipedia/commons/a/a7/Blue_male_budgie.jpg"/>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+      <h4>Copyright (c) 2016 Tobias Unger All Rights Reserved.</h4>
+      </div>
+    </footer>
+
+    <script src="scripts/events.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </body>
+</html>

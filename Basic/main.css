@@ -1,0 +1,31 @@
+body {
+  background: #999;
+  font-family: arial;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+li {
+  color: pink;
+}
+
+a {
+  color: green;
+}
+
+p {
+  background: #666;
+  color: white;
+  padding: 10px;
+}
+
+.secondary {
+  background: none;
+  color: #555;
+}
+
+#main {
+  background-color: #333;
+}
