@@ -1,0 +1,12 @@
+.jumbotron{
+  text-align: center;
+}
+
+#panel1 {
+  background-color: black;
+  color: white;
+}
+
+.testpanel {
+  display: none;
+}
