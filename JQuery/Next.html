@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Next JQuery</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css" media="screen" title="no title">
+  </head>
+  <body>
+    <div class="container">
+      <ul class="list">
+        <li>eins</li>
+        <li class="special">zwei</li>
+        <li>drei</li>
+        <li>vier:
+          <ul class="sublist">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <script src="scripts/jquery.js">
+
+      $(function () {
+        $("li").on("click", function () {
+          $(this).removeClass("special");
+          $(this).siblings().addClass("special");
+        });
+      });
+
+    </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

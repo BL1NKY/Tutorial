@@ -12,11 +12,11 @@
     <div class="container">
       <div class="jumbotron">
         <h1>JQuery!</h1>
-        <button type="button" class="btn btn-default panelbutton" data-panelid="panel1" id="btn1">#btn1</button>
-        <button type="button" class="btn btn-default panelbutton" data-panelid="panel2" id="btn2">#btn2</button>
-        <button type="button" class="btn btn-default panelbutton" data-panelid="panel3" id="btn3">#btn3</button>
-        <button type="button" class="btn btn-default panelbutton" data-panelid="panel4" id="btn4">#btn4</button>
-        <button type="button" class="btn btn-default panelbutton" data-panelid="panelAll" id="btn5">#btn5</button>
+        <button type="button" class="btn btn-default panelbutton" data-panelid="panel1" id="btn1">Panel1</button>
+        <button type="button" class="btn btn-default panelbutton" data-panelid="panel2" id="btn2">Panel2</button>
+        <button type="button" class="btn btn-default panelbutton" data-panelid="panel3" id="btn3">Panel3</button>
+        <button type="button" class="btn btn-default panelbutton" data-panelid="panel4" id="btn4">Panel4</button>
+        <button type="button" class="btn btn-default panelbutton" data-panelid="panelAll" id="btn5">Alle</button>
       </div>
     </div>
 
@@ -50,17 +50,19 @@
       </div>
     </div>
 
-    <script src="Scripts/jquery.js"></script>
-    <script>
+    <script src="Scripts/jquery.js">
 
       $(document).ready(function(){
+
         var inhalt = "Neuer Inhalt";
         $(".panelbutton").on("click", function () {
-          var panelId = $(this).attr("id");
+          var panelId = $(this).attr("data-panelId");
           $("#" + panelId).toggle();
           $("#" + panelId + ".panel-body").html(inhalt);
+          if (panelId == "panelAll"){
+            $(".testpanel").toggle();
+          }
         });
-
       });
 
     </script>
