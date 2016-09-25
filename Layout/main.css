@@ -21,7 +21,6 @@ nav ul {
 
 nav ul li {
    background-color: black;
-   color: white;
    display: inline-block;
    list-style-type: none;
    padding: 5px 15px;
@@ -31,6 +30,8 @@ nav ul li {
 
 nav ul li a {
    color: white;
+   margin: 0;
+   padding: 0;
 }
 
 div.row:after {
